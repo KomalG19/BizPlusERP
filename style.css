@@ -9,8 +9,8 @@
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -62,6 +62,7 @@ header {
     background: transparent;
     border-radius: 12px;
     font-weight: 600;
+    color: #0b2b4b;
 }
 
 .btn-buy {
@@ -79,6 +80,7 @@ header {
     background: #66d6ff;
     display: flex;
     align-items: center;
+    overflow: hidden; /* important */
 }
 
 .hero-container {
@@ -96,11 +98,18 @@ header {
 }
 
 .hero-text h1 {
+    font-family: 'Inter', sans-serif;
     font-size: 54px;
-    font-weight: 800;
-    color: #ffffff;
+    font-weight: 800;              /* KEY */
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     line-height: 1.15;
-    margin-bottom: 20px;
+    color: #ffffff;
+
+    /* THIS creates the live-site effect */
+    text-shadow: 
+        0 4px 0 rgba(0,0,0,0.12),
+        0 10px 30px rgba(0,0,0,0.18);
 }
 
 .hero-text p {
@@ -132,12 +141,14 @@ header {
     font-weight: 600;
 }
 
-/* IMAGE */
+/* IMAGE (LIKE LIVE SITE) */
 .hero-image {
     width: 55%;
     position: relative;
+    height: 520px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .hero-image::before {
@@ -148,12 +159,306 @@ header {
     background: rgba(255,255,255,0.18);
     border-radius: 36px;
     right: -40px;
+    bottom: -60px;
 }
 
 .hero-image img {
     position: relative;
-    max-width: 600px;
+    max-width: 620px;
     width: 100%;
+    transform: translateY(40px); /* hides bottom part */
     border-radius: 24px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.25);
 }
+
+/* =========================
+   ABOUT PAGE (SCROLLABLE)
+========================= */
+
+/* ================= FULL ABOUT (INLINE SCROLL) ================= */
+
+.about-page {
+    background: linear-gradient(135deg, #66d6ff, #4cc9ff);
+    padding: 120px 0;
+}
+
+.about-wrapper {
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 460px;
+    width: 100%;
+}
+
+.about-content {
+    color: #0b2b4b;
+}
+
+.about-content h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* MISSION & VISION */
+.mission-vision {
+    max-width: 1100px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.mv-box h3 {
+    font-size: 22px;
+    color: #0b2b4b;
+    margin-bottom: 12px;
+}
+
+.mv-box p {
+    color: #0b2b4b;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* =========================
+   LIVE ABOUT PAGE STYLE
+========================= */
+
+.about-live {
+    background: linear-gradient(135deg, #66d6ff, #4cc9ff);
+    padding: 120px 0 80px;
+}
+
+.about-live-container {
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.about-live-image img {
+    max-width: 480px;
+    width: 100%;
+}
+
+.about-live-content {
+    color: #0b2b4b;
+}
+
+.about-live-content h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.about-live-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* MISSION / VISION */
+.mission-vision {
+    max-width: 1320px;
+    margin: 80px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.mv-box h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #0b2b4b;
+}
+
+.mv-box p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #0b2b4b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .about-live-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-live-image img {
+        margin: auto;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+/* ================= HOME SCROLL SECTIONS ================= */
+
+.home-about {
+    background: #f7fcff;
+    padding: 100px 0;
+}
+
+.home-about-container {
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.home-about-image img {
+    max-width: 420px;
+}
+
+.home-about-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #0b2b4b;
+}
+
+.home-about-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0b2b4b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* FEATURES */
+.home-features {
+    padding: 100px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features-grid {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 30px;
+    background: #f3fbff;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* CTA */
+.home-cta {
+    background: linear-gradient(135deg, #66d6ff, #4cc9ff);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.home-cta h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .home-about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ================================
+   HORIZONTAL LOGO SCROLLER STRIP
+================================ */
+
+.logo-strip {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 22px 0;
+    width: 100%;
+}
+
+/* Moving track */
+.logo-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll-logos 30s linear infinite;
+}
+
+/* Each logo */
+.logo-track img {
+    height: 60px;                 /* ⬅ increased size */
+    width: auto;
+    margin: 0 70px;               /* more breathing space */
+    object-fit: contain;
+
+    opacity: 1;
+    filter: contrast(1.25) saturate(1.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-track img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Animation */
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
