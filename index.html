@@ -10,111 +10,364 @@
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="container nav-flex">
-      <div class="logo">
-        <img src="assets/logo.png" alt="BizPlus ERP Logo">
-        <span>BizPlus ERP</span>
-      </div>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container nav-flex">
 
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#modules">Modules</a>
-        <a href="#contact">Contact</a>
-        <a href="#demo" class="btn-outline">Free Demo</a>
-      </nav>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="BizPlus ERP Logo">
+      <span>BizPlus ERP</span>
     </div>
-  </header>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
-    <div class="container hero-flex">
-
-      <div class="hero-text">
-        <h1>All-in-One ERP Software<br>to Run Your Business Smarter</h1>
-        <p>
-          Manage accounting, inventory, GST, HR, payroll and sales
-          with one powerful ERP platform built for growing businesses.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#demo" class="btn-primary">Request Free Demo</a>
-          <a href="#features" class="btn-secondary">Explore Features</a>
-        </div>
-
-        <ul class="hero-points">
-          <li>✔ Cloud-based & secure</li>
-          <li>✔ GST-ready & compliant</li>
-          <li>✔ Real-time reports</li>
-        </ul>
-      </div>
-
-      <div class="hero-image">
-        <img src="https://dummyimage.com/500x400/edf2f7/333&text=ERP+Dashboard" alt="BizPlus ERP Dashboard">
-      </div>
-
+    <!-- HAMBURGER (ONLY ICONS, FIXED) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </section>
 
-  <!-- ===== FEATURES SECTION ===== -->
-  <section class="features" id="features">
-    <div class="container">
-      <h2>Why Choose BizPlus ERP?</h2>
-      <p class="section-subtitle">
-        Everything your business needs — integrated into one smart ERP system.
+    <nav id="navMenu">
+      <a href="#features">Features</a>
+      <a href="#modules">Modules</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0)" class="btn-outline" onclick="openDemoPopup()">Free Demo</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-flex">
+
+    <div class="hero-text reveal">
+      <h1>All-in-One ERP Software<br>to Run Your Business Smarter</h1>
+      <p>
+        Manage accounting, inventory, GST, HR, payroll and sales
+        with one powerful ERP platform built for growing businesses.
       </p>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Accounting & GST</h3>
-          <p>Automated billing, ledgers, GST returns and financial reports.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Inventory Management</h3>
-          <p>Track stock, purchases, sales and warehouses in real time.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>HR & Payroll</h3>
-          <p>Manage employees, attendance, salaries and compliance easily.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Sales & Purchase</h3>
-          <p>Control your entire sales and procurement lifecycle.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Reports & Analytics</h3>
-          <p>Get real-time dashboards and business insights.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Cloud Access</h3>
-          <p>Access your business data anytime, anywhere securely.</p>
-        </div>
+      <div class="hero-buttons">
+        <a href="javascript:void(0)" class="btn-primary" onclick="openDemoPopup()">Get Free Demo</a>
+        <a href="#features" class="btn-secondary">Explore Features</a>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== CTA SECTION ===== -->
-  <section class="cta" id="demo">
-    <div class="container cta-box">
-      <h2>Ready to Digitize Your Business?</h2>
-      <p>Start using BizPlus ERP and gain full control over your operations.</p>
-      <a href="#contact" class="btn-primary">Get Free ERP Demo</a>
+      <ul class="hero-points">
+        <li>✔ Cloud-based & secure</li>
+        <li>✔ GST-ready & compliant</li>
+        <li>✔ Real-time reports</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer" id="contact">
-    <div class="container footer-flex">
-      <p>© 2026 BizPlus ERP. All rights reserved.</p>
-      <p>Email: info@bizpluserp.com | Phone: +91-XXXXXXXXXX</p>
+    <div class="hero-image reveal-right">
+      <img src="assets/images/bizplus-erp-dashboard.png" alt="BizPlus ERP Dashboard">
     </div>
-  </footer>
+
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features" id="features">
+  <div class="container">
+    <h2>Why Choose BizPlus ERP?</h2>
+    <p class="section-subtitle">
+      Everything your business needs — integrated into one smart ERP system.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+  <div class="feature-icon">💼</div>
+  <h3>Accounting & GST</h3>
+  <p>Automated billing, ledgers, GST returns and financial reports.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+</div>
+      
+      <div class="feature-card reveal">
+  <div class="feature-icon">📦</div>
+  <h3>Inventory Management</h3>
+  <p>Track stock, purchases, sales and warehouses in real time.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+</div>
+
+     
+      <div class="feature-card reveal">
+  <div class="feature-icon">👥</div>
+  <h3>HR & Payroll</h3>
+  <p>Manage employees, attendance, salaries and compliance easily.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+</div>
+       
+      <div class="feature-card reveal">
+  <div class="feature-icon">🧾</div>
+  <h3>Sales & Purchase</h3>
+  <p>Control your entire sales and procurement lifecycle.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+</div>
+     
+        <div class="feature-card reveal">
+  <div class="feature-icon">📊</div>
+  <h3>Reports & Analytics</h3>
+  <p>Get real-time dashboards and business insights.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+</div>
+
+      <div class="feature-card reveal">
+  <div class="feature-icon">☁</div>
+  <h3>Cloud Access</h3>
+  <p>Access your business data anytime, anywhere securely.</p>
+  <a class="cta-link" onclick="openDemoPopup()">Request Demo →</a>
+  </div>
+
+  </div>
+</section>
+
+<!-- ===== MODULES ===== -->
+<section class="modules" id="modules">
+  <div class="container">
+    <h2>BizPlus ERP Modules</h2>
+    <p class="section-subtitle">A complete suite of ERP modules for every business function.</p>
+
+    <div class="modules-grid">
+      <div class="module-card reveal">
+  <div class="module-inner">
+
+    <!-- FRONT -->
+    <div class="module-front">
+      <div class="module-icon">📊</div>
+      <h3>Accounting & GST</h3>
+      <p>Automated finance, billing and GST compliance.</p>
+    </div>
+
+    <!-- BACK -->
+    <div class="module-back">
+      <h3>Accounting & GST</h3>
+      <a class="btn-primary" onclick="openDemoPopup()">View Demo</a>
+    </div>
+
+  </div>
+</div>
+
+
+     <div class="module-card reveal">
+  <div class="module-inner">
+
+    <!-- FRONT -->
+    <div class="module-front">
+      <div class="module-icon">📦</div>
+      <h3>Inventory</h3>
+      <p>Real-time stock and warehouse management</p>
+    </div>
+
+    <!-- BACK -->
+    <div class="module-back">
+      <h3>Inventory</h3>
+      <a class="btn-primary" onclick="openDemoPopup()">View Demo</a>
+    </div>
+
+  </div>
+</div>
+
+
+      <div class="module-card reveal">
+  <div class="module-inner">
+
+    <!-- FRONT -->
+    <div class="module-front">
+      <div class="module-icon">👥</div>
+      <h3>HR and Payroll</h3>
+      <p>Employee Management and payroll..</p>
+    </div>
+
+    <!-- BACK -->
+    <div class="module-back">
+      <h3>HR and Payroll</h3>
+      <a class="btn-primary" onclick="openDemoPopup()">View Demo</a>
+    </div>
+
+  </div>
+</div>
+
+
+      <div class="module-card reveal">
+  <div class="module-inner">
+
+    <!-- FRONT -->
+    <div class="module-front">
+      <div class="module-icon">📈</div>
+      <h3>Reports</h3>
+      <p>MIS dashboard and insights.</p>
+    </div>
+
+    <!-- BACK -->
+    <div class="module-back">
+      <h3>Reports</h3>
+      <a class="btn-primary" onclick="openDemoPopup()">View Demo</a>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- ===== SCREENSHOTS ===== -->
+<section class="screenshots reveal">
+  <div class="container">
+    <h2>BizPlus ERP Dashboard Preview</h2>
+    <p class="section-subtitle">Clean, powerful and easy-to-use interface.</p>
+
+    <div class="carousel">
+      <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+
+      <img src="assets/images/erp-dashboard-1.png" class="carousel-slide active">
+      <img src="assets/images/erp-dashboard-2.png" class="carousel-slide">
+      <img src="assets/images/erp-dashboard-3.png" class="carousel-slide">
+      <img src="assets/images/erp-dashboard-4.png" class="carousel-slide">
+
+      <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <a class="btn-primary" onclick="openDemoPopup()">See Live Demo</a>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta reveal">
+  <div class="container">
+    <h2>Ready to Digitize Your Business?</h2>
+    <p>Book a free ERP demo now.</p>
+    <a class="btn-primary" onclick="openDemoPopup()">Book Free Demo</a>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section class="demo-form-section" id="contact">
+  <div class="container demo-grid">
+
+    <div class="demo-info reveal-left">
+      <h2>Request a Free Demo</h2>
+      <ul>
+        <li>✔ Personalized walkthrough</li>
+        <li>✔ Industry-specific demo</li>
+        <li>✔ Free consultation</li>
+      </ul>
+    </div>
+
+    <div class="demo-form reveal-right">
+      <form id="erpDemoForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="text" placeholder="Company Name">
+        <button class="btn-primary btn-full">Request Demo</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 BizPlus ERP. All rights reserved.</p>
+</footer>
+
+<!-- ===== FLOATING CTA ===== -->
+<div class="floating-cta" onclick="openDemoPopup()">📞 Free Demo</div>
+
+<!-- ===== POPUP MODAL ===== -->
+<div class="popup-overlay" id="demoPopup">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closeDemoPopup()">×</span>
+    <h2>Get Free ERP Demo</h2>
+    <p>Our expert will contact you shortly.</p>
+    <form id="popupDemoForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <button class="btn-primary btn-full">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+function openDemoPopup(){
+  document.getElementById("demoPopup").classList.add("active");
+}
+
+function closeDemoPopup(){
+  document.getElementById("demoPopup").classList.remove("active");
+}
+
+/* Scroll animation */
+function revealOnScroll(){
+  document.querySelectorAll(".reveal,.reveal-left,.reveal-right").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* Carousel */
+let i=0,slides=document.querySelectorAll(".carousel-slide");
+function showSlide(n){slides.forEach(s=>s.classList.remove("active"));slides[n].classList.add("active")}
+function nextSlide(){i=(i+1)%slides.length;showSlide(i)}
+function prevSlide(){i=(i-1+slides.length)%slides.length;showSlide(i)}
+setInterval(nextSlide,5000);
+
+/* Exit intent */
+document.addEventListener("mouseleave",e=>{
+  if(e.clientY < 10) openDemoPopup();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  if (!scrollTopBtn) return;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+});
+</script>
+
+
+
+<!-- ===== WHATSAPP CTA ===== -->
+<a 
+  href="https://wa.me/91*********?text=Hello%20BizPlus%20ERP%20Team%2C%20I%20am%20interested%20in%20a%20free%20ERP%20demo.%20Please%20contact%20me."
+  class="whatsapp-cta"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.735 5.47 2.02 7.77L0 32l8.42-2.01A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.09c-2.55 0-5.03-.66-7.21-1.92l-.52-.3-5 1.2 1.33-4.87-.34-.54A13.04 13.04 0 1129.04 16c0 7.2-5.84 13.09-13.04 13.09zm7.35-9.8c-.4-.2-2.37-1.17-2.74-1.3-.37-.14-.64-.2-.91.2-.27.4-1.05 1.3-1.29 1.57-.24.27-.47.3-.87.1-.4-.2-1.7-.63-3.23-2-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.62.18-.82.18-.18.4-.47.6-.7.2-.24.27-.4.4-.67.14-.27.07-.5-.03-.7-.1-.2-.91-2.2-1.25-3-.33-.8-.67-.69-.91-.7h-.78c-.27 0-.7.1-1.07.5-.37.4-1.4 1.37-1.4 3.35s1.43 3.89 1.63 4.16c.2.27 2.82 4.31 6.84 6.05.96.41 1.71.66 2.29.85.96.3 1.83.26 2.52.16.77-.12 2.37-.97 2.7-1.9.34-.94.34-1.74.24-1.9-.1-.17-.37-.27-.77-.47z"/>
+  </svg>
+</a>
+
+<!-- ===== SCROLL TO TOP BUTTON ===== -->
+<button id="scrollTopBtn" aria-label="Scroll to top">
+  ⬆
+</button>
 
 </body>
 </html>
